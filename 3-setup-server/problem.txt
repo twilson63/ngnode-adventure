@@ -10,6 +10,7 @@ In order to serve our angularjs application, we want to setup a nodejs server. Y
     <html>
       <head><title>Hello World</title></head>
       <body>
+        <h1>Hello World</h1>
         <script src="browser.js"></script>
       </body>
     </html>
@@ -34,3 +35,4 @@ In order to serve our angularjs application, we want to setup a nodejs server. Y
 Finally, to verify your setup
 
     ngnode-adventure verify server.js
+

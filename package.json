@@ -11,6 +11,9 @@
   "license": "ISC",
   "dependencies": {
     "adventure": "^2.11.0",
-    "adventure-verify": "^2.2.0"
+    "adventure-verify": "^2.2.0",
+    "concat-stream": "^1.5.0",
+    "request": "^2.64.0",
+    "rewire": "^2.3.4"
   }
 }

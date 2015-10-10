@@ -1,1 +1,42 @@
-solution.txt
+index.html
+
+    <!doctype html>
+    <html>
+      <head><title>Hello World</title></head>
+      <body>
+        <h1>Hello World</h1>
+        <script src="browser.js"></script>
+      </body>
+    </html>
+
+
+server.js
+
+    var http = require('http')
+    var ecstatic = require('ecstatic')
+
+    var server = http.createServer(function (req, res) {
+      // serve assets if available
+      ecstatic('www')(req, res)
+    })
+
+    server.listen(process.env.PORT || 1337)
+
+package.json
+
+    {
+      "name": "ngnode-app",
+      "version": "1.0.0",
+      "description": "",
+      "main": "index.js",
+      "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node server.js"
+      },
+      "keywords": [],
+      "author": "Tom",
+      "license": "ISC",
+      "dependencies": {
+        "ecstatic": "^1.1.3"
+      }
+    }

@@ -1,0 +1,66 @@
+# Add an AngularJS App
+
+In this exercise, we are going to install angular from npm, then create a browser.js file and initialize an angular js app.
+
+First, lets install angular from npm.
+
+    npm i angular angular-ui-router -S
+
+Next, create a `browser.js` file and require `angular`
+
+    var angular = require('angular')
+
+Lets install `hyperscript` and use it to inject
+an ui-view div node into your application.
+
+    npm i hyperscript -S
+
+Add hyperscript and inject a `data-ui-view` node:
+
+    var h = require('hyperscript')
+
+    document.body.appendChild(
+      h('div', { 'data-ui-view': '' })
+    )
+
+Next, continue editing the `browser.js` file and add an angular module:
+
+    angular.module('app', [
+      require('angular-ui-router')
+    ]).config(function ( 
+      $urlRouterProvider,
+      $stateProvider) {
+
+      $urlRouterProvider.otherwise('/')
+      $stateProvider
+        .state('/', require('./components/home'))
+    })
+
+At the end of the `browser.js` file we need to manually bootstrap angularJS:
+
+    angular.element(document).ready(function() {
+      angular.bootstrap(document, ['app'])
+    })
+
+The final step is to create a starter component:
+
+    mkdir components
+    touch components/home.js
+
+And add the following to `home.js`
+
+    exports.url = '/'
+    exports.template = '<h1>{{title}}</h1>'
+    exports.controller = component
+
+    function component ($scope) {
+      $scope.title = 'Hello World 2'
+    }
+
+Install and setup watchify to automatically browserify your code:
+
+    npm i watchify --save-dev
+    json -I -f package.json -e 'this.scripts.start = "watchify browser.js -o www/browser.js & node server.js'
+
+
+Now run and verify your app
