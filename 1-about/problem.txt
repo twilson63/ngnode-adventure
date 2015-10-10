@@ -1,0 +1,11 @@
+# About ngnode Adventure
+
+In this adventure, we will build an AngularJS app using NodeJS and Browserify. The application will be a localstorage todo application, nothing special, but it will give you a way to practice setting up applications using Angular and NodeJS.
+
+In this exercise, all you need to do is learn how to verify your exercises.
+
+To verify an exercise you run the application `ngnode-adventure` followed by the argument `verify` then the filename and/or argument
+
+    ngnode-adventure verify GO
+
+

@@ -1,0 +1,10 @@
+# 2 Create a Project
+
+To create a nodejs project we use the `node package manager` or `npm` it comes installed with node.  The function `npm init` creates a `package.json` and pre-fills it with the data of the the current project.
+
+In this exercise, create a new folder called `ngnode-app` and then cd into `ngnode-app` and run `npm init`.
+
+When you have successfully accepted all of the default prompts, verify your project by running:
+
+    ngnode-adventure verify package.json
+
